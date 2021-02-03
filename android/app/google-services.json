@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "52659378560",
+    "project_id": "wishey-1",
+    "storage_bucket": "wishey-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52659378560:android:8f514dd09f3175de994965",
+        "android_client_info": {
+          "package_name": "com.keppi.wishey_restart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52659378560-sp0qkb6i47okk9n2j1h2g5ag87mr6gh4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keppi.wishey_restart",
+            "certificate_hash": "ef0f789d9225d559b7744b9aa9754d6a1bf64e82"
+          }
+        },
+        {
+          "client_id": "52659378560-b1qpal1kfte9fp5ba21481qltjjm6a57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt9yjX0lAlYUD3F0HqUH0LY7SsEisfE9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52659378560-b1qpal1kfte9fp5ba21481qltjjm6a57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

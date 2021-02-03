@@ -1,0 +1,17 @@
+const Map<String, String> enUS = {
+  'FieldKey.email error': 'Invalid email',
+  'FieldKey.password error': 'Password must be longer than 6 characters',
+  'welcome': 'Welcome to Wishey',
+  'submit': 'Sign In',
+  'no_account': 'No account?',
+  'register': 'Sign Up',
+  'title': 'All your wishes await! Just tell us a few things!',
+  'no_wishes': "You don't seem to have wishes. \nDo you feel like making one?",
+  'make_wish': 'Make a wish!',
+  'wish_name': 'Wish Name',
+  'WishField.theme': 'Theme',
+  'WishField.price': 'Price',
+  'WishField.link': 'Link',
+  'WishField.note': 'Note',
+  'WishField.fromWho': 'From Who',
+};
