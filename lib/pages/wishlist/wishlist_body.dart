@@ -17,8 +17,8 @@ class WishlistBody extends StatelessWidget {
       children: wishes
           .map(
             (e) => InkWell(
+              key: Key(e.title),
               child: ItemBox(
-                key: Key(e.title),
                 title: e.title,
               ),
             ),
