@@ -58,14 +58,12 @@ mixin _$WishlistState {
 
 /// @nodoc
 abstract class $WishlistStateCopyWith<$Res> {
-  factory $WishlistStateCopyWith(
-          WishlistState value, $Res Function(WishlistState) then) =
+  factory $WishlistStateCopyWith(WishlistState value, $Res Function(WishlistState) then) =
       _$WishlistStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WishlistStateCopyWithImpl<$Res>
-    implements $WishlistStateCopyWith<$Res> {
+class _$WishlistStateCopyWithImpl<$Res> implements $WishlistStateCopyWith<$Res> {
   _$WishlistStateCopyWithImpl(this._value, this._then);
 
   final WishlistState _value;
@@ -75,17 +73,14 @@ class _$WishlistStateCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class _$$LoadingWishlistStateCopyWith<$Res> {
-  factory _$$LoadingWishlistStateCopyWith(_$LoadingWishlistState value,
-          $Res Function(_$LoadingWishlistState) then) =
+  factory _$$LoadingWishlistStateCopyWith(_$LoadingWishlistState value, $Res Function(_$LoadingWishlistState) then) =
       __$$LoadingWishlistStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingWishlistStateCopyWithImpl<$Res>
-    extends _$WishlistStateCopyWithImpl<$Res>
+class __$$LoadingWishlistStateCopyWithImpl<$Res> extends _$WishlistStateCopyWithImpl<$Res>
     implements _$$LoadingWishlistStateCopyWith<$Res> {
-  __$$LoadingWishlistStateCopyWithImpl(_$LoadingWishlistState _value,
-      $Res Function(_$LoadingWishlistState) _then)
+  __$$LoadingWishlistStateCopyWithImpl(_$LoadingWishlistState _value, $Res Function(_$LoadingWishlistState) _then)
       : super(_value, (v) => _then(v as _$LoadingWishlistState));
 
   @override
@@ -104,8 +99,7 @@ class _$LoadingWishlistState implements LoadingWishlistState {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingWishlistState);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingWishlistState);
   }
 
   @override
@@ -180,18 +174,15 @@ abstract class LoadingWishlistState implements WishlistState {
 
 /// @nodoc
 abstract class _$$LoadedWishlistStateCopyWith<$Res> {
-  factory _$$LoadedWishlistStateCopyWith(_$LoadedWishlistState value,
-          $Res Function(_$LoadedWishlistState) then) =
+  factory _$$LoadedWishlistStateCopyWith(_$LoadedWishlistState value, $Res Function(_$LoadedWishlistState) then) =
       __$$LoadedWishlistStateCopyWithImpl<$Res>;
   $Res call({List<Wish> wishes});
 }
 
 /// @nodoc
-class __$$LoadedWishlistStateCopyWithImpl<$Res>
-    extends _$WishlistStateCopyWithImpl<$Res>
+class __$$LoadedWishlistStateCopyWithImpl<$Res> extends _$WishlistStateCopyWithImpl<$Res>
     implements _$$LoadedWishlistStateCopyWith<$Res> {
-  __$$LoadedWishlistStateCopyWithImpl(
-      _$LoadedWishlistState _value, $Res Function(_$LoadedWishlistState) _then)
+  __$$LoadedWishlistStateCopyWithImpl(_$LoadedWishlistState _value, $Res Function(_$LoadedWishlistState) _then)
       : super(_value, (v) => _then(v as _$LoadedWishlistState));
 
   @override
@@ -236,14 +227,12 @@ class _$LoadedWishlistState implements LoadedWishlistState {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_wishes));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_wishes));
 
   @JsonKey(ignore: true)
   @override
   _$$LoadedWishlistStateCopyWith<_$LoadedWishlistState> get copyWith =>
-      __$$LoadedWishlistStateCopyWithImpl<_$LoadedWishlistState>(
-          this, _$identity);
+      __$$LoadedWishlistStateCopyWithImpl<_$LoadedWishlistState>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -309,11 +298,9 @@ class _$LoadedWishlistState implements LoadedWishlistState {
 }
 
 abstract class LoadedWishlistState implements WishlistState {
-  const factory LoadedWishlistState(final List<Wish> wishes) =
-      _$LoadedWishlistState;
+  const factory LoadedWishlistState(final List<Wish> wishes) = _$LoadedWishlistState;
 
   List<Wish> get wishes;
   @JsonKey(ignore: true)
-  _$$LoadedWishlistStateCopyWith<_$LoadedWishlistState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadedWishlistStateCopyWith<_$LoadedWishlistState> get copyWith => throw _privateConstructorUsedError;
 }

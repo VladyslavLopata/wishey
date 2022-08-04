@@ -1,3 +1,9 @@
 {
-    "makefile.extensionOutputFolder": "./.vscode"
+    "makefile.extensionOutputFolder": "./.vscode",
+    "dart.lineLength": 120,
+    "[dart]": {
+        "editor.rulers": [
+            120
+        ],
+    }
 }

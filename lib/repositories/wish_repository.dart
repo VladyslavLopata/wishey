@@ -20,8 +20,7 @@ class WishRepository {
 
       final wishlists = response.data['data'].cast<Map<String, dynamic>>();
 
-      final wishlistsMapped =
-          wishlists.map<WishGroup>(WishGroup.fromJson).toList();
+      final wishlistsMapped = wishlists.map<WishGroup>(WishGroup.fromJson).toList();
 
       return wishlistsMapped;
     } catch (e) {

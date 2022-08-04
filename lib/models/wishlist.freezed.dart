@@ -21,8 +21,7 @@ Wish _$WishFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Wish {
   String get id => throw _privateConstructorUsedError;
-  String get title =>
-      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  String get title => throw _privateConstructorUsedError; // ignore: invalid_annotation_target
   @JsonKey(name: 'image_url')
   String? get imageUrl => throw _privateConstructorUsedError;
   String? get note => throw _privateConstructorUsedError;
@@ -35,14 +34,8 @@ mixin _$Wish {
 
 /// @nodoc
 abstract class $WishCopyWith<$Res> {
-  factory $WishCopyWith(Wish value, $Res Function(Wish) then) =
-      _$WishCopyWithImpl<$Res>;
-  $Res call(
-      {String id,
-      String title,
-      @JsonKey(name: 'image_url') String? imageUrl,
-      String? note,
-      String? price});
+  factory $WishCopyWith(Wish value, $Res Function(Wish) then) = _$WishCopyWithImpl<$Res>;
+  $Res call({String id, String title, @JsonKey(name: 'image_url') String? imageUrl, String? note, String? price});
 }
 
 /// @nodoc
@@ -88,22 +81,14 @@ class _$WishCopyWithImpl<$Res> implements $WishCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$_WishCopyWith<$Res> implements $WishCopyWith<$Res> {
-  factory _$$_WishCopyWith(_$_Wish value, $Res Function(_$_Wish) then) =
-      __$$_WishCopyWithImpl<$Res>;
+  factory _$$_WishCopyWith(_$_Wish value, $Res Function(_$_Wish) then) = __$$_WishCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String id,
-      String title,
-      @JsonKey(name: 'image_url') String? imageUrl,
-      String? note,
-      String? price});
+  $Res call({String id, String title, @JsonKey(name: 'image_url') String? imageUrl, String? note, String? price});
 }
 
 /// @nodoc
-class __$$_WishCopyWithImpl<$Res> extends _$WishCopyWithImpl<$Res>
-    implements _$$_WishCopyWith<$Res> {
-  __$$_WishCopyWithImpl(_$_Wish _value, $Res Function(_$_Wish) _then)
-      : super(_value, (v) => _then(v as _$_Wish));
+class __$$_WishCopyWithImpl<$Res> extends _$WishCopyWithImpl<$Res> implements _$$_WishCopyWith<$Res> {
+  __$$_WishCopyWithImpl(_$_Wish _value, $Res Function(_$_Wish) _then) : super(_value, (v) => _then(v as _$_Wish));
 
   @override
   _$_Wish get _value => super._value as _$_Wish;
@@ -145,11 +130,7 @@ class __$$_WishCopyWithImpl<$Res> extends _$WishCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Wish implements _Wish {
   const _$_Wish(
-      {required this.id,
-      required this.title,
-      @JsonKey(name: 'image_url') this.imageUrl,
-      this.note,
-      this.price});
+      {required this.id, required this.title, @JsonKey(name: 'image_url') this.imageUrl, this.note, this.price});
 
   factory _$_Wish.fromJson(Map<String, dynamic> json) => _$$_WishFromJson(json);
 
@@ -195,8 +176,7 @@ class _$_Wish implements _Wish {
 
   @JsonKey(ignore: true)
   @override
-  _$$_WishCopyWith<_$_Wish> get copyWith =>
-      __$$_WishCopyWithImpl<_$_Wish>(this, _$identity);
+  _$$_WishCopyWith<_$_Wish> get copyWith => __$$_WishCopyWithImpl<_$_Wish>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -243,14 +223,12 @@ mixin _$WishGroup {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $WishGroupCopyWith<WishGroup> get copyWith =>
-      throw _privateConstructorUsedError;
+  $WishGroupCopyWith<WishGroup> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $WishGroupCopyWith<$Res> {
-  factory $WishGroupCopyWith(WishGroup value, $Res Function(WishGroup) then) =
-      _$WishGroupCopyWithImpl<$Res>;
+  factory $WishGroupCopyWith(WishGroup value, $Res Function(WishGroup) then) = _$WishGroupCopyWithImpl<$Res>;
   $Res call({String id, String title});
 }
 
@@ -282,18 +260,15 @@ class _$WishGroupCopyWithImpl<$Res> implements $WishGroupCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$_WishGroupCopyWith<$Res> implements $WishGroupCopyWith<$Res> {
-  factory _$$_WishGroupCopyWith(
-          _$_WishGroup value, $Res Function(_$_WishGroup) then) =
+  factory _$$_WishGroupCopyWith(_$_WishGroup value, $Res Function(_$_WishGroup) then) =
       __$$_WishGroupCopyWithImpl<$Res>;
   @override
   $Res call({String id, String title});
 }
 
 /// @nodoc
-class __$$_WishGroupCopyWithImpl<$Res> extends _$WishGroupCopyWithImpl<$Res>
-    implements _$$_WishGroupCopyWith<$Res> {
-  __$$_WishGroupCopyWithImpl(
-      _$_WishGroup _value, $Res Function(_$_WishGroup) _then)
+class __$$_WishGroupCopyWithImpl<$Res> extends _$WishGroupCopyWithImpl<$Res> implements _$$_WishGroupCopyWith<$Res> {
+  __$$_WishGroupCopyWithImpl(_$_WishGroup _value, $Res Function(_$_WishGroup) _then)
       : super(_value, (v) => _then(v as _$_WishGroup));
 
   @override
@@ -322,8 +297,7 @@ class __$$_WishGroupCopyWithImpl<$Res> extends _$WishGroupCopyWithImpl<$Res>
 class _$_WishGroup implements _WishGroup {
   const _$_WishGroup({required this.id, required this.title});
 
-  factory _$_WishGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_WishGroupFromJson(json);
+  factory _$_WishGroup.fromJson(Map<String, dynamic> json) => _$$_WishGroupFromJson(json);
 
   @override
   final String id;
@@ -346,15 +320,12 @@ class _$_WishGroup implements _WishGroup {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(title));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(id), const DeepCollectionEquality().hash(title));
 
   @JsonKey(ignore: true)
   @override
-  _$$_WishGroupCopyWith<_$_WishGroup> get copyWith =>
-      __$$_WishGroupCopyWithImpl<_$_WishGroup>(this, _$identity);
+  _$$_WishGroupCopyWith<_$_WishGroup> get copyWith => __$$_WishGroupCopyWithImpl<_$_WishGroup>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -365,11 +336,9 @@ class _$_WishGroup implements _WishGroup {
 }
 
 abstract class _WishGroup implements WishGroup {
-  const factory _WishGroup(
-      {required final String id, required final String title}) = _$_WishGroup;
+  const factory _WishGroup({required final String id, required final String title}) = _$_WishGroup;
 
-  factory _WishGroup.fromJson(Map<String, dynamic> json) =
-      _$_WishGroup.fromJson;
+  factory _WishGroup.fromJson(Map<String, dynamic> json) = _$_WishGroup.fromJson;
 
   @override
   String get id;
@@ -377,6 +346,5 @@ abstract class _WishGroup implements WishGroup {
   String get title;
   @override
   @JsonKey(ignore: true)
-  _$$_WishGroupCopyWith<_$_WishGroup> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_WishGroupCopyWith<_$_WishGroup> get copyWith => throw _privateConstructorUsedError;
 }

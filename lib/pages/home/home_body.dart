@@ -17,11 +17,11 @@ class HomeBody extends StatelessWidget {
     return WishGrid(
       children: wishGroups
           .map(
-            (e) => InkWell(
-              onTap: () => context.goNamed('wish', params: {'id': e.id}),
+            (wishGroup) => InkWell(
+              onTap: () => context.goNamed('wish', params: {'id': wishGroup.id}),
               child: ItemBox(
-                key: Key(e.title),
-                title: e.title,
+                key: Key(wishGroup.title),
+                title: wishGroup.title,
               ),
             ),
           )

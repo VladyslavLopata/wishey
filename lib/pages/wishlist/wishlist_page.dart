@@ -18,18 +18,14 @@ class WishlistPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = injector<WishlistCubit>()..initialize(id);
 
-    return BlocProvider.value(
-      value: cubit,
-      child: BlocBuilder<WishlistCubit, WishlistState>(
-        builder: (context, state) {
-          return state.when(
-            loading: () => const LoadingIndicator(),
-            loaded: (wishes) => WishlistBody(
-              wishes: wishes,
-            ),
-          );
-        },
-      ),
+    return BlocBuilder<WishlistCubit, WishlistState>(
+      bloc: cubit,
+      builder: (_, state) {
+        return state.when(
+          loading: () => const LoadingIndicator(),
+          loaded: (wishes) => WishlistBody(wishes: wishes),
+        );
+      },
     );
   }
 }

@@ -27,8 +27,7 @@ _$_WishGroup _$$_WishGroupFromJson(Map<String, dynamic> json) => _$_WishGroup(
       title: json['title'] as String,
     );
 
-Map<String, dynamic> _$$_WishGroupToJson(_$_WishGroup instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$_WishGroupToJson(_$_WishGroup instance) => <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
     };

@@ -58,8 +58,7 @@ mixin _$HomeState {
 
 /// @nodoc
 abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res>;
+  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) = _$HomeStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -73,17 +72,14 @@ class _$HomeStateCopyWithImpl<$Res> implements $HomeStateCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$LoadingHomeStateCopyWith<$Res> {
-  factory _$$LoadingHomeStateCopyWith(
-          _$LoadingHomeState value, $Res Function(_$LoadingHomeState) then) =
+  factory _$$LoadingHomeStateCopyWith(_$LoadingHomeState value, $Res Function(_$LoadingHomeState) then) =
       __$$LoadingHomeStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingHomeStateCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res>
+class __$$LoadingHomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements _$$LoadingHomeStateCopyWith<$Res> {
-  __$$LoadingHomeStateCopyWithImpl(
-      _$LoadingHomeState _value, $Res Function(_$LoadingHomeState) _then)
+  __$$LoadingHomeStateCopyWithImpl(_$LoadingHomeState _value, $Res Function(_$LoadingHomeState) _then)
       : super(_value, (v) => _then(v as _$LoadingHomeState));
 
   @override
@@ -102,8 +98,7 @@ class _$LoadingHomeState implements LoadingHomeState {
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingHomeState);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$LoadingHomeState);
   }
 
   @override
@@ -178,18 +173,15 @@ abstract class LoadingHomeState implements HomeState {
 
 /// @nodoc
 abstract class _$$LoadedHomeStateCopyWith<$Res> {
-  factory _$$LoadedHomeStateCopyWith(
-          _$LoadedHomeState value, $Res Function(_$LoadedHomeState) then) =
+  factory _$$LoadedHomeStateCopyWith(_$LoadedHomeState value, $Res Function(_$LoadedHomeState) then) =
       __$$LoadedHomeStateCopyWithImpl<$Res>;
   $Res call({List<WishGroup> wishlists});
 }
 
 /// @nodoc
-class __$$LoadedHomeStateCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res>
+class __$$LoadedHomeStateCopyWithImpl<$Res> extends _$HomeStateCopyWithImpl<$Res>
     implements _$$LoadedHomeStateCopyWith<$Res> {
-  __$$LoadedHomeStateCopyWithImpl(
-      _$LoadedHomeState _value, $Res Function(_$LoadedHomeState) _then)
+  __$$LoadedHomeStateCopyWithImpl(_$LoadedHomeState _value, $Res Function(_$LoadedHomeState) _then)
       : super(_value, (v) => _then(v as _$LoadedHomeState));
 
   @override
@@ -211,8 +203,7 @@ class __$$LoadedHomeStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LoadedHomeState implements LoadedHomeState {
-  const _$LoadedHomeState(final List<WishGroup> wishlists)
-      : _wishlists = wishlists;
+  const _$LoadedHomeState(final List<WishGroup> wishlists) : _wishlists = wishlists;
 
   final List<WishGroup> _wishlists;
   @override
@@ -231,13 +222,11 @@ class _$LoadedHomeState implements LoadedHomeState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LoadedHomeState &&
-            const DeepCollectionEquality()
-                .equals(other._wishlists, _wishlists));
+            const DeepCollectionEquality().equals(other._wishlists, _wishlists));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_wishlists));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_wishlists));
 
   @JsonKey(ignore: true)
   @override
@@ -308,11 +297,9 @@ class _$LoadedHomeState implements LoadedHomeState {
 }
 
 abstract class LoadedHomeState implements HomeState {
-  const factory LoadedHomeState(final List<WishGroup> wishlists) =
-      _$LoadedHomeState;
+  const factory LoadedHomeState(final List<WishGroup> wishlists) = _$LoadedHomeState;
 
   List<WishGroup> get wishlists;
   @JsonKey(ignore: true)
-  _$$LoadedHomeStateCopyWith<_$LoadedHomeState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadedHomeStateCopyWith<_$LoadedHomeState> get copyWith => throw _privateConstructorUsedError;
 }

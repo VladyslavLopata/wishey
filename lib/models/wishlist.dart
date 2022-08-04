@@ -24,6 +24,5 @@ class WishGroup with _$WishGroup {
     required String title,
   }) = _WishGroup;
 
-  factory WishGroup.fromJson(Map<String, dynamic> json) =>
-      _$WishGroupFromJson(json);
+  factory WishGroup.fromJson(Map<String, dynamic> json) => _$WishGroupFromJson(json);
 }

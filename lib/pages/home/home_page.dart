@@ -13,13 +13,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = injector<HomeCubit>()..initialize();
 
-    return BlocProvider.value(
-      value: cubit,
-      child: BlocBuilder<HomeCubit, HomeState>(
-        builder: (context, state) => state.when(
-          loading: () => const LoadingIndicator(),
-          loaded: (wishGroups) => HomeBody(wishGroups: wishGroups),
-        ),
+    return BlocBuilder<HomeCubit, HomeState>(
+      bloc: cubit,
+      builder: (_, state) => state.when(
+        loading: () => const LoadingIndicator(),
+        loaded: (wishGroups) => HomeBody(wishGroups: wishGroups),
       ),
     );
   }
