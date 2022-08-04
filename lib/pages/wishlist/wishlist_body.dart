@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:wishey/core/widgets/item_box.dart';
 import 'package:wishey/core/widgets/wish_grid.dart';
 import 'package:wishey/models/wishlist.dart';
 
-class HomeLoadedWidget extends StatelessWidget {
-  const HomeLoadedWidget({
+class WishlistBody extends StatelessWidget {
+  const WishlistBody({
     super.key,
-    required this.wishGroups,
+    required this.wishes,
   });
 
-  final List<WishGroup> wishGroups;
+  final List<Wish> wishes;
 
   @override
   Widget build(BuildContext context) {
     return WishGrid(
-      children: wishGroups
+      children: wishes
           .map(
             (e) => InkWell(
-              onTap: () => context.goNamed('wish', params: {'id': e.id}),
               child: ItemBox(
                 key: Key(e.title),
                 title: e.title,

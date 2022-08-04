@@ -1,62 +1,54 @@
-import 'dart:convert';
-
-import 'package:http/http.dart';
+import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 import 'package:wishey/core/api_config.dart';
+import 'package:wishey/core/logger.dart';
 import 'package:wishey/models/wishlist.dart';
 
+@singleton
 class WishRepository {
-  WishRepository();
+  WishRepository(this._client);
 
-  final _client = Client();
+  final Dio _client;
 
   Future<List<WishGroup>> getWishes() async {
-    final Response response;
     try {
-      response = await _client.get(
-        Uri.parse(
-          ApiConfig.apiAddress + ApiConfig.wishlistsRoute,
-        ),
-      );
+      final response = await _client.get(ApiConfig.wishlistsRoute);
+
+      if (response.statusCode != 200) {
+        return [];
+      }
+
+      final wishlists = response.data['data'].cast<Map<String, dynamic>>();
+
+      final wishlistsMapped =
+          wishlists.map<WishGroup>(WishGroup.fromJson).toList();
+
+      return wishlistsMapped;
     } catch (e) {
+      logger.d(e);
       return [];
     }
-
-    if (response.statusCode != 200) {
-      return [];
-    }
-
-    final decoded = jsonDecode(response.body);
-
-    final wishlists = decoded['data'].cast<Map<String, dynamic>>();
-
-    final wishlistsMapped =
-        wishlists.map<WishGroup>(WishGroup.fromJson).toList();
-
-    return wishlistsMapped;
   }
 
   Future<List<Wish>?> getWishlistById(String id) async {
-    final Response response;
     try {
-      response = await _client.get(
-        Uri.parse(
-          '${ApiConfig.apiAddress}${ApiConfig.wishlistRoute}/$id',
-        ),
+      final response = await _client.get(
+        // ignore: prefer_interpolation_to_compose_strings
+        ApiConfig.wishlistRoute + '/$id',
       );
+
+      if (response.statusCode != 200) {
+        return [];
+      }
+
+      final wishlists = response.data['data'].cast<Map<String, dynamic>>();
+
+      final wishlistsMapped = wishlists.map<Wish>(Wish.fromJson).toList();
+
+      return wishlistsMapped;
     } catch (e) {
+      logger.d(e);
       return [];
     }
-
-    if (response.statusCode != 200) {
-      return [];
-    }
-
-    final decoded = jsonDecode(response.body);
-
-    final wishlists = decoded['data'].cast<Map<String, dynamic>>();
-
-    final wishlistsMapped = wishlists.map<Wish>(Wish.fromJson).toList();
-
-    return wishlistsMapped;
   }
 }

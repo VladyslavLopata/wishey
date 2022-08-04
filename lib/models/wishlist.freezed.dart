@@ -21,7 +21,9 @@ Wish _$WishFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Wish {
   String get id => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
+  String get title =>
+      throw _privateConstructorUsedError; // ignore: invalid_annotation_target
+  @JsonKey(name: 'image_url')
   String? get imageUrl => throw _privateConstructorUsedError;
   String? get note => throw _privateConstructorUsedError;
   String? get price => throw _privateConstructorUsedError;
@@ -36,7 +38,11 @@ abstract class $WishCopyWith<$Res> {
   factory $WishCopyWith(Wish value, $Res Function(Wish) then) =
       _$WishCopyWithImpl<$Res>;
   $Res call(
-      {String id, String title, String? imageUrl, String? note, String? price});
+      {String id,
+      String title,
+      @JsonKey(name: 'image_url') String? imageUrl,
+      String? note,
+      String? price});
 }
 
 /// @nodoc
@@ -86,7 +92,11 @@ abstract class _$$_WishCopyWith<$Res> implements $WishCopyWith<$Res> {
       __$$_WishCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id, String title, String? imageUrl, String? note, String? price});
+      {String id,
+      String title,
+      @JsonKey(name: 'image_url') String? imageUrl,
+      String? note,
+      String? price});
 }
 
 /// @nodoc
@@ -137,7 +147,7 @@ class _$_Wish implements _Wish {
   const _$_Wish(
       {required this.id,
       required this.title,
-      this.imageUrl,
+      @JsonKey(name: 'image_url') this.imageUrl,
       this.note,
       this.price});
 
@@ -147,7 +157,9 @@ class _$_Wish implements _Wish {
   final String id;
   @override
   final String title;
+// ignore: invalid_annotation_target
   @override
+  @JsonKey(name: 'image_url')
   final String? imageUrl;
   @override
   final String? note;
@@ -198,7 +210,7 @@ abstract class _Wish implements Wish {
   const factory _Wish(
       {required final String id,
       required final String title,
-      final String? imageUrl,
+      @JsonKey(name: 'image_url') final String? imageUrl,
       final String? note,
       final String? price}) = _$_Wish;
 
@@ -208,7 +220,8 @@ abstract class _Wish implements Wish {
   String get id;
   @override
   String get title;
-  @override
+  @override // ignore: invalid_annotation_target
+  @JsonKey(name: 'image_url')
   String? get imageUrl;
   @override
   String? get note;
